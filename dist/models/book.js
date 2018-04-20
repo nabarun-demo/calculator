@@ -13,15 +13,18 @@ class Book {
         this.number1 = number1;
         this.number2 = number2;
     }
+    getSummation() {
+        return this.number1 + this.number2;
+    }
 }
 __decorate([
-    class_validator_1.IsInt({ message: 'Number1 must be numeric' }),
-    class_validator_1.IsNotEmpty({ message: '$property is required' }),
+    class_validator_1.IsInt({ message: "Number1 must be numeric" }),
+    class_validator_1.IsNotEmpty({ message: "$property is required" }),
     class_validator_1.IsPositive()
 ], Book.prototype, "number1", void 0);
 __decorate([
-    class_validator_1.IsInt({ message: 'Number2 must be numeric' }),
-    class_validator_1.IsNotEmpty({ message: '$property is required' }),
+    class_validator_1.IsInt({ message: "Number2 must be numeric" }),
+    class_validator_1.IsNotEmpty({ message: "$property is required" }),
     class_validator_1.IsPositive()
 ], Book.prototype, "number2", void 0);
 exports.Book = Book;

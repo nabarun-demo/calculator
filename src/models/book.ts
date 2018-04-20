@@ -5,25 +5,29 @@ import {
   IsNotEmpty,
   IsNegative,
   IsPositive
-} from 'class-validator';
-import { isNullOrUndefined } from 'util';
+} from "class-validator";
+import { isNullOrUndefined } from "util";
 
 export class Book {
-  @IsInt({ message: 'Number1 must be numeric' })
-  @IsNotEmpty({ message: '$property is required' })
+  @IsInt({ message: "Number1 must be numeric" })
+  @IsNotEmpty({ message: "$property is required" })
   @IsPositive()
-  number1: number;
+  private number1: number;
 
-  @IsInt({ message: 'Number2 must be numeric' })
-  @IsNotEmpty({ message: '$property is required' })
+  @IsInt({ message: "Number2 must be numeric" })
+  @IsNotEmpty({ message: "$property is required" })
   @IsPositive()
-  number2: number;
+  private number2: number;
 
   // constructor() {}
 
   constructor(number1: number, number2: number) {
     this.number1 = number1;
     this.number2 = number2;
+  }
+
+  public getSummation(): number {
+    return this.number1 + this.number2;
   }
 
   // IsEqual(b: Book): boolean {

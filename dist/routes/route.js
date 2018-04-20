@@ -8,12 +8,12 @@ class Routes {
         this.configRoutes();
     }
     configRoutes() {
-        this.apiRouter.get('/', (req, res) => {
+        this.apiRouter.get("/", (req, res) => {
             res.json({
-                message: 'Welcome to our calculator API!'
+                message: "Welcome to our calculator API!"
             });
         });
-        this.apiRouter.post('/add', bookController_1.default.getAdditionResult);
+        this.apiRouter.post("/add", bookController_1.default.getAdditionResult);
     }
 }
 exports.default = new Routes();

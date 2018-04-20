@@ -1,5 +1,5 @@
-import * as express from 'express';
-import ba from '../controllers/bookController';
+import * as express from "express";
+import ba from "../controllers/bookController";
 
 class Routes {
   public apiRouter: express.Router;
@@ -9,14 +9,14 @@ class Routes {
     this.configRoutes();
   }
 
-  configRoutes(): void {
-    this.apiRouter.get('/', (req, res) => {
+  private configRoutes(): void {
+    this.apiRouter.get("/", (req, res) => {
       res.json({
-        message: 'Welcome to our calculator API!'
+        message: "Welcome to our calculator API!"
       });
     });
 
-    this.apiRouter.post('/add', ba.getAdditionResult);
+    this.apiRouter.post("/add", ba.getAdditionResult);
   }
 }
 
